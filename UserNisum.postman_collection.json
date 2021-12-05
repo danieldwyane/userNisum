@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "f97208a2-ec32-492b-9b2b-d673159337ce",
+		"name": "UserNisum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiZGFuaWVsQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2Mzg2ODI5NzcsImV4cCI6MTYzODY4MzU3N30.uOvwuTXiws6LwSnax9X3S6-qe39FcMLGsJtnXAbuswsLh2u_WtMaisUDVXPvkW8yKTIoa8T0slS3y1l340tZag",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"daniel\",\r\n    \"email\":\"daniel@gmail.com\",\r\n    \"password\":\"House123456$$\",\r\n    \"phones\": [\r\n        {\r\n            \"number\":\"35045465\",\r\n            \"citycode\":\"57\",\r\n            \"countrycode\":\"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "daniel@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Dwyane123456$$",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
